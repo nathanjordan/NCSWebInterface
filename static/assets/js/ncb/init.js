@@ -1,4 +1,9 @@
 define(['jquery'], function($) {
+    var module;
+
+    function hidePages() {
+        $('#pages .container').hide();
+    }
 
     function initNavigation() {
         $().ready( function() {
@@ -8,7 +13,6 @@ define(['jquery'], function($) {
             $('#results').hide();
             $('#visualization').hide();
         });
-
         $().ready( function() {
             $('#mainNav a').click( function() {
                 var target;
@@ -20,12 +24,10 @@ define(['jquery'], function($) {
             });
         });
 
-        function hidePages() {
-            $('#pages .container').hide();
-        }
     }
 
-    return {
+    module = {
         initNavigation: initNavigation
     };
-});
+    return module;
+}

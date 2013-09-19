@@ -1,97 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="University of Nevada Brain Computation Lab">
 
-    <title>Neo-Cortical Builder</title>
+        <title>Neo-Cortical Builder</title>
 
-    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/lib/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="assets/css/ncb/main.css" rel="stylesheet">
-  </head>
+        <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
-  <body>
+        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/lib/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="assets/css/ncb/main.css" rel="stylesheet">
+    </head>
 
-    <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <span class="navbar-brand">Neo-Cortical Builder</span>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul id="mainNav" class="nav navbar-nav">
-            <li class="active"><a href="#model"><span class="glyphicon glyphicon-pencil"></span> Model Builder</a></li>
-            <li><a href="#simulation"><span class="glyphicon glyphicon-th"></span> Simulation Builder</a></li>
-            <li><a href="#cluster"><span class="glyphicon glyphicon-wrench"></span> Cluster Config</a></li>
-            <li><a href="#results"><span class="glyphicon glyphicon-list-alt"></span> Results</a></li>
-            <li><a href="#visualization"><span class="glyphicon glyphicon-eye-open"></span> Visualization</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#documentation">Documentation</a></li>
-            <li><a href="#github">GitHub</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <body>
+
+    {% include 'global/header.html' %}
 
     <div id="pages">
-        <div id="model" class="container">
-            <div class="page-header">
-            <h1>Model Configuration</h1>
-            </div>
-            <div class="col-lg-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">Model Components</div>
-                <div class="panel-body">
-                    <ul class="nav nav-pills nav-stacked">
-                    <li class="active">
-                    <a href="">
-                    <span class="badge pull-right">1</span>
-                    Cell Groups
-                    </a>
-                    </li>
-                    <li>
-                    <a href="">
-                    <span class="badge pull-right">2</span>
-                    Cells
-                    </a>
-                    </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        </div>
-
-        <div id="simulation" class="container">
-            <div class="page-header">
-                <h1>Simulation Configuration</h1>
-            </div>
-        </div>
-
-        <div id="cluster" class="container">
-            <div class="page-header">
-                <h1>Cluster Configuration</h1>
-            </div>
-        </div>
-
-        <div id="results" class="container">
-            <div class="page-header">
-                <h1>Simulation Results</h1>
-            </div>
-        </div>
-
-        <div id="visualization" class="container">
-            <div class="page-header">
-                <h1>Simulation Visualization</h1>
-            </div>
-        </div>
+        {% include 'pages/modelbuilder.html' %}
+        {% include 'pages/simbuilder.html' %}
+        {% include 'pages/clusterconfig.html' %}
+        {% include 'pages/simresults.html' %}
+        {% include 'pages/simvis.html' %}
     </div>
 
+    <!-- Load the scripts via Require.js -->
     <script src="assets/js/lib/require.js" data-main="assets/js/ncb/main"></script>
 
-  </body>
+    </body>
 </html>
