@@ -11,6 +11,7 @@ requirejs.config({
         'async': 'lib/async',
         // NCB Specific
         'main': 'ncb/main',
+        'app': 'ncb/app',
         'init': 'ncb/init'
     },
     shim: {
@@ -26,6 +27,6 @@ requirejs.config({
     }
 });
 
-require(['init'], function (init) {
+require(['init', 'app'], function (init) {
     init.initNavigation();
 });

@@ -1,5 +1,4 @@
 define(['jquery'], function($) {
-    var module;
 
     function hidePages() {
         $('#pages .container').hide();
@@ -23,11 +22,9 @@ define(['jquery'], function($) {
                 $(target).show();
             });
         });
-
     }
 
-    module = {
+    return {
         initNavigation: initNavigation
     };
-    return module;
-}
+});

@@ -13,7 +13,7 @@ def mainPage():
     testVar = 'This is a test'
     return render_template('index.html', test = testVar)
 
-# Serves static resources like CSS, js, images, etc.
+# Serves static resources like css, js, images, etc.
 @app.route('/assets/<path:resource>')
 def serveStaticResource(resource):
     return send_from_directory('static/assets/', resource)
