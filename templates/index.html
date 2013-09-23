@@ -8,15 +8,13 @@
 
         <title>Neo-Cortical Builder</title>
 
-        <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+        <link rel="icon" type="image/png" href="/assets/ico/ncs_favicon.png">
 
         <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/lib/bootstrap-theme.min.css" rel="stylesheet">
         <link href="assets/css/ncb/main.css" rel="stylesheet">
     </head>
 
     <body>
-
     {% include 'global/header.html' %}
 
     <div id="pages">
@@ -25,6 +23,10 @@
         {% include 'pages/clusterconfig/index.html' %}
         {% include 'pages/simresults/index.html' %}
         {% include 'pages/simvis/index.html' %}
+    </div>
+
+    <div class="container footer">
+        <p>© University of Nevada {{ year }}</p>
     </div>
 
     <!-- Load the scripts via Require.js -->

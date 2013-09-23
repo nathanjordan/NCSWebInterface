@@ -1,4 +1,5 @@
 from flask import Flask, render_template, send_from_directory
+import datetime
 
 # Create new application
 app = Flask(__name__)
@@ -9,9 +10,8 @@ app.debug = True
 # Serves the main application
 @app.route('/')
 def mainPage():
-    # Test for templated rendering
-    testVar = 'This is a test'
-    return render_template('index.html', test = testVar)
+    year = datetime.datetime.now().year
+    return render_template('index.html', year = year)
 
 # Serves static resources like css, js, images, etc.
 @app.route('/assets/<path:resource>')
