@@ -27,6 +27,6 @@ requirejs.config({
     }
 });
 
-require(['init', 'app'], function (init) {
+require(['init', 'app', 'jquery.bootstrap'], function (init) {
     init.initNavigation();
 });

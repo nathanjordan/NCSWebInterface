@@ -1,5 +1,5 @@
 body {
-	padding-top: 50px;
+    padding-top: 26px;
 }
 .navbar-brand {
     background: url('/assets/img/ncs_logo.png');
@@ -12,4 +12,10 @@ body {
     color:#CCC;
     padding-top: 8px;
     border-top:1px solid #CCC;
+}
+#pages {
+    min-height:600px;
+}
+.page {
+    height:100%;
 }
